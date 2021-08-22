@@ -1,0 +1,13 @@
+<ng-container *ngIf="post$ | async as post">
+  <h1 class="capitalize">{{ post.title }}</h1>
+  <p>{{ post.body }}</p>
+  <mat-card class="comment" *ngFor="let comment of post.comments">
+    <mat-card-header>
+      <mat-card-title class="capitalize">{{ comment.name }}</mat-card-title>
+      <mat-card-subtitle>{{ comment.email }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ comment.body }}</p>
+    </mat-card-content>
+  </mat-card>
+</ng-container>

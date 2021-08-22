@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/ngrx-data-load'),
+      dir: require('path').join(__dirname, './coverage/ngrx-jsonplaceholder-client'),
       subdir: '.',
       reporters: [
         { type: 'html' },

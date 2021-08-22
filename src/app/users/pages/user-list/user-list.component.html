@@ -1,0 +1,7 @@
+<mat-nav-list *ngFor="let user of users$ | async | keyvalue">
+  <a mat-list-item [routerLink]="user.value.id.toString()">
+    <mat-icon mat-list-icon>person</mat-icon>
+    <div mat-line>{{ user.value.username }}</div>
+    <div mat-line>{{ user.value.name }}</div>
+  </a>
+</mat-nav-list>
